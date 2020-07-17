@@ -16,7 +16,7 @@ function Logo(props) {
   return <img className="logos" src={props.name} alt="logo" style={logoSize} />;
 }
 
-const Footer = () => (
+const Footer = (props) => (
   <div className="footer">
     <div className="center-div">
       <div className="contents">
@@ -24,9 +24,9 @@ const Footer = () => (
           <h3>PREETHAM.M.S</h3>
         </div>
         <div className="routes">
-          <p>Projects</p>
-          <p>Skills</p>
-          <p>Contact</p>
+          <p onClick={() => props.history.push("/projects")}>Projects</p>
+          <p onClick={() => props.history.push("/skills")}>Skills</p>
+          <p onClick={() => props.history.push("/contact")}>Contact</p>
         </div>
         <div className="follow-up">
           <p>Follow me on</p>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { withRouter } from "react-router-dom";
 import styled from "styled-components";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 
@@ -15,8 +16,10 @@ const Ul = styled.ul`
   flex-flow: row nowrap;
   flex-direction: row;
   justify-content: end;
+  /* height: 100%; */
   li {
     padding: 0 10px;
+    cursor: pointer;
   }
   img {
     width: 30px;
@@ -27,21 +30,29 @@ const Ul = styled.ul`
     flex-flow: column nowrap;
     /* background-color: #0d2538; */
     background-image: linear-gradient(0deg, #4085d6 0%, #2bb2bb 100%);
-    position: fixed;
+    /* position: fixed; */
+    position: absolute;
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     top: 0;
     right: 0;
-    height: 100vh;
+    /* height: 100vh; */
+    height: auto;
     width: wrap-fit-content;
     margin: 0px;
-    padding: 40px 0px;
+    padding: 40px 0px 0px 0px;
+    /* padding-top: 40px; */
+    z-index: 1;
     /* padding-top: 3.5rem; */
     transition: transform 0.3s ease-in-out;
 
     li {
-      color: #fff;
+      /* color: #fff; */
+      /* color: black; */
+      color: ${(props) => (props.theme.mode === "dark" ? "#EEE" : "#111")};
       padding: 20px;
+      /* padding: 20px 0px 0px 0px; */
       justify-content: center;
+      cursor: pointer;
     }
 
     img {
@@ -56,32 +67,37 @@ const GlobalStyle = createGlobalStyle`
      background-color: ${(props) =>
        props.theme.mode === "dark" ? "#2B2A2A" : "#EEE"};
      color: ${(props) => (props.theme.mode === "dark" ? "#EEE" : "#111")};
-
+      
   }
 
+  
   
   
 
  
 `;
 
-function RightNav({ open }) {
+function RightNav({ open, history }) {
+  // const { history } = history;
+  // console.log(history);
+  // console.log(open);
+  console.log(open);
   const [theme, setTheme] = useState({ mode: "dark" });
   const [toggleIcon, setToggleIcon] = useState("sun");
 
   function toggle() {
     setToggleIcon(toggleIcon === "sun" ? "moon" : "sun");
-    console.log(toggleIcon);
+    // console.log(toggleIcon);
   }
 
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Ul open={open}>
-        <li>Home</li>
-        <li>Projects</li>
-        <li>Skills</li>
-        <li>Contact</li>
+        <li onClick={() => history.push("/")}>Home</li>
+        <li onClick={() => history.push("/projects")}>Projects</li>
+        <li onClick={() => history.push("/skills")}>Skills</li>
+        <li onClick={() => history.push("/contact")}>Contact</li>
         <li onClick={toggle}>
           <img
             alt="icon"
@@ -98,7 +114,7 @@ function RightNav({ open }) {
   );
 }
 
-export default RightNav;
+export default withRouter(RightNav);
 
 // nav{
 

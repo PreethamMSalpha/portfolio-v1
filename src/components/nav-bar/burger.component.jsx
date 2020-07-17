@@ -15,6 +15,7 @@ const StyledBurger = styled.div`
     display: flex;
     justify-content: space-around;
     flex-flow: column nowrap;
+    position: absolute;
   }
 
   div {
@@ -40,7 +41,9 @@ const StyledBurger = styled.div`
   }
 `;
 
-const Burger = () => {
+const Burger = (props) => {
+  // console.log(props);
+  const { history } = props;
   const [open, setOpen] = useState(false);
 
   return (
@@ -50,7 +53,7 @@ const Burger = () => {
         <div />
         <div />
       </StyledBurger>
-      <RightNav open={open} />
+      <RightNav open={open} history={history} />
     </>
   );
 };

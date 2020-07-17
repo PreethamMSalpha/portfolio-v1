@@ -12,7 +12,7 @@ const NavBase = styled.div`
   /* background: white; */
   display: flex;
   z-index: 1;
-  position: fixed;
+  /* position: fixed; */
   margin-bottom: unset;
   box-shadow: rgba(0, 0, 0, 0.2) 2px 0px 20px 0px;
   /* background: rgb(33, 33, 33); */
@@ -40,14 +40,17 @@ const Nav = styled.nav`
   }
 `;
 
-const Navbar = () => {
+const Navbar = (props) => {
+  // console.log(props);
+  const { history, ...otherProps } = props;
+  // console.log(history);
   return (
     <NavBase>
       <Nav>
         <div>
           <h3 className="logo">PREETHAM.M.S</h3>
         </div>
-        <Burger />
+        <Burger history={history} />
       </Nav>
     </NavBase>
   );

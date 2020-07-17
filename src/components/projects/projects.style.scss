@@ -1,0 +1,74 @@
+.projects {
+    width: 80%;
+    margin: auto;
+    height: auto;
+
+
+    .col-sections {
+
+        height: auto;
+        // margin-top: 100px;
+        padding: 50px 20px 50px;
+        margin: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+
+        .filter {
+            display: flex;
+            flex-direction: row;
+            width: 30%;
+            margin: 30px;
+            align-content: center;
+            justify-content: space-between;
+
+            li {
+                display: inline;
+                padding: 20px;
+                position: relative;
+                // margin: 10%;
+            }
+        }
+
+
+
+        .project-component {
+            width: 98%;
+            margin: 30%;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 20px;
+            flex-direction: row;
+
+            justify-content: space-between;
+            align-items: center;
+            margin: 30px;
+            padding: 10px;
+
+            @media screen and (max-width: 900px) {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+            }
+
+            button {
+                height: 30px;
+                width: fit-content;
+            }
+        }
+    }
+}
+
+.border {
+    border-style: groove;
+    height: fit-content;
+    width: 300px;
+    justify-items: center;
+    text-align: center;
+    padding-bottom: 20px;
+}

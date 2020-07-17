@@ -1,0 +1,80 @@
+.knowledge {
+    width: 70%;
+    margin: auto;
+    padding: 50px 20px 50px;
+
+    h1 {
+        text-align: center;
+    }
+
+    .skills-col {
+
+        display: flex;
+        flex-direction: column;
+        // justify-content: start;
+        // justify-items: start;
+        // text-align: center;
+
+        @media screen and (max-width: 800px) {
+            h2 {
+                text-align: center;
+                font-size: 20px;
+                width: 100%;
+                margin-top: 50px;
+            }
+
+            align-items: center;
+            align-content: center;
+        }
+
+        .img-title-com {
+            display: flex;
+            flex-direction: row;
+            width: auto;
+
+            @media screen and (max-width: 1000px) {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            .img-title {
+                // background-color: red;
+                display: flex;
+                flex-direction: column;
+                height: auto;
+                width: auto;
+                margin-right: 20px;
+                text-align: center;
+
+                @media screen and (max-width: 800px) {
+                    margin: 20px;
+                    justify-content: center;
+                    align-items: center;
+
+                }
+
+                img {
+                    // width: 40px;
+                    // height: 40px;
+                    width: autp;
+                    height: auto;
+                }
+
+                &:hover {
+                    transform: scale(1.2);
+                    transition: transform 0.2s ease;
+                }
+            }
+        }
+    }
+}
+
+img {
+    margin: auto;
+    width: 80px;
+    height: 50px;
+    text-align: center;
+}
