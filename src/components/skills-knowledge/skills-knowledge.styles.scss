@@ -15,6 +15,11 @@
         // justify-items: start;
         // text-align: center;
 
+        h3 {
+            font-size: 1.4rem;
+            margin-top: 50px;
+        }
+
         @media screen and (max-width: 800px) {
             h2 {
                 text-align: center;
@@ -29,8 +34,9 @@
 
         .img-title-com {
             display: flex;
-            flex-direction: row;
-            width: auto;
+            // flex-direction: row;
+            flex-wrap: wrap;
+            max-width: 100%;
 
             @media screen and (max-width: 1000px) {
                 display: flex;
@@ -46,7 +52,7 @@
                 flex-direction: column;
                 height: auto;
                 width: auto;
-                margin-right: 20px;
+                margin: 20px 40px 0 0;
                 text-align: center;
 
                 @media screen and (max-width: 800px) {

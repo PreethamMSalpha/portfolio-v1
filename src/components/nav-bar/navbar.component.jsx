@@ -2,6 +2,11 @@ import React from "react";
 import styled from "styled-components";
 // import Burger from "./Burger";
 import Burger from "./burger.component";
+// import alphaLight from "../../assets/nav-bar/alpha_light.png";
+// import alphaDark from "../../assets/nav-bar/alpha_dark.png";
+// import {handleSideBar} from './rightnav.component';
+// import alphavector from "../../assets/nav-bar/alpha_vector.svg";
+import alphacolor from "../../assets/nav-bar/alphacolor.svg";
 
 const NavBase = styled.div`
   width: 100%;
@@ -34,9 +39,31 @@ const Nav = styled.nav`
   overflow: hidden;
   justify-content: space-between;
 
+  /* div {
+    display: flex;
+  } */
+`;
+
+const LnN = styled.div`
+  display: flex;
+
   .logo {
     /* padding: 15px 0px; */
     justify-content: start;
+    margin-left: 15px;
+  }
+
+  .icon {
+    height: 50px;
+    width: 70px;
+    transition: 0.5s;
+    /* height: auto;
+    width: auto; */
+
+    &:hover {
+      transition: 0.5s;
+      transform: rotate(360deg);
+    }
   }
 `;
 
@@ -47,9 +74,10 @@ const Navbar = (props) => {
   return (
     <NavBase>
       <Nav>
-        <div>
+        <LnN>
+          <img className="icon" src={alphacolor} alt="logo" />
           <h3 className="logo">PREETHAM.M.S</h3>
-        </div>
+        </LnN>
         <Burger history={history} />
       </Nav>
     </NavBase>

@@ -152,7 +152,7 @@ export const FRONTEND = {
     },
     {
       id: 8,
-      name: "juery",
+      name: "jQuery",
       imageUrl: "https://i.ibb.co/gwZ4Dds/jQuery.png",
     },
     {

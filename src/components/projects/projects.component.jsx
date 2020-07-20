@@ -17,11 +17,6 @@ function Projects() {
     <div className="projects">
       <div className="col-sections">
         <h1>Projects</h1>
-        <div className="filter">
-          <li>All</li>
-          <li>Web</li>
-          <li>Mob</li>
-        </div>
         <div className="project-component">
           <ProjectTile />
           <ProjectTile />

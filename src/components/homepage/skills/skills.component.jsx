@@ -17,7 +17,7 @@ function SkillContainer(props) {
 
 const SkillsHomepage = () => (
   <div className="skills">
-    <h2>Skills</h2>
+    <h1>Skills</h1>
 
     <div className="skill-content">
       <SkillContainer image={web} title="Full Stack Development" />

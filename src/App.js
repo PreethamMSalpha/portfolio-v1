@@ -1,13 +1,17 @@
 import React from "react";
 import { Switch, Route, Link } from "react-router-dom";
+// import { connect } from "react-redux";
 
 import "./App.css";
 
 import Homepage from "./homepage.component";
 import Projects from "./components/projects/projects.component";
 import Knowledge from "./components/skills-knowledge/skills-knowledge.components";
+import Contact from "./components/contact/contact.component";
 import Navbar from "./components/nav-bar/navbar.component";
 import Footer from "./components/footer/footer.component";
+
+// import { setSidebar } from "./redux/theme/theme.actions";
 
 const DemoPage = (props) => {
   console.log(props);
@@ -29,23 +33,20 @@ function App() {
         <Route exact path="/" component={Homepage} />
         <Route exact path="/projects" component={Projects} />
         <Route exact path="/skills" component={Knowledge} />
+        <Route exact path="/contact" component={Contact} />
       </Switch>
       <Route path="/" component={Footer} />
     </div>
   );
 }
 
-// function App() {
-//   return (
-//     <div>
-//       <Navbar />
-//       <Projects />
-//       <Footer />
-//     </div>
-//   );
-// }
-
 export default App;
+
+// const mapStateToDispatch = (dispatch) => ({
+//   setSidebar: (sidebar) => dispatch(setSidebar(sidebar)),
+// });
+
+// export default connect(null, mapStateToDispatch)(App);
 
 // import React, { useState } from "react";
 // import { ThemeProvider } from "styled-components";

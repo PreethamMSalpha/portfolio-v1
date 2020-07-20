@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { withRouter } from "react-router-dom";
 import styled from "styled-components";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
+
+import { connect } from "react-redux";
 
 import sun from "../../assets/nav-bar/sun.svg";
 import moon from "../../assets/nav-bar/moon.svg";
@@ -29,7 +31,9 @@ const Ul = styled.ul`
   @media (max-width: 768px) {
     flex-flow: column nowrap;
     /* background-color: #0d2538; */
-    background-image: linear-gradient(0deg, #4085d6 0%, #2bb2bb 100%);
+    /* background-image: linear-gradient(0deg, #4085d6 0%, #2bb2bb 100%); */
+    background-color: ${(props) =>
+      props.theme.mode === "dark" ? "#2B2A2A" : "#F9F9F9"};
     /* position: fixed; */
     position: absolute;
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
@@ -44,6 +48,7 @@ const Ul = styled.ul`
     z-index: 1;
     /* padding-top: 3.5rem; */
     transition: transform 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.2) 2px 0px 20px 0px;
 
     li {
       /* color: #fff; */
@@ -65,7 +70,7 @@ const Ul = styled.ul`
 const GlobalStyle = createGlobalStyle`
   body{
      background-color: ${(props) =>
-       props.theme.mode === "dark" ? "#2B2A2A" : "#EEE"};
+       props.theme.mode === "dark" ? "#2B2A2A" : "#F9F9F9"};
      color: ${(props) => (props.theme.mode === "dark" ? "#EEE" : "#111")};
       
   }
@@ -81,15 +86,24 @@ function RightNav({ open, history }) {
   // const { history } = history;
   // console.log(history);
   // console.log(open);
-  console.log(open);
+  const sideBar = open;
+  const [burger, setBurger] = useState(sideBar);
   const [theme, setTheme] = useState({ mode: "dark" });
+
   const [toggleIcon, setToggleIcon] = useState("sun");
 
   function toggle() {
     setToggleIcon(toggleIcon === "sun" ? "moon" : "sun");
-    // console.log(toggleIcon);
   }
 
+  function handleClicks() {
+    setBurger(!burger);
+    console.log(burger);
+    // history.push(`/${route}`);
+    // open = false;
+  }
+  // <li onClick={() => history.push("/")}>Home</li>
+  // <Ul open={open}>
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
@@ -116,9 +130,9 @@ function RightNav({ open, history }) {
 
 export default withRouter(RightNav);
 
-// nav{
+// using - redux
+// const mapStateToProps = (state) => ({
+//   open: state.sidebar.open,
+// });
 
-//   background-color: ${(props) =>
-//     props.theme.mode === "dark" ? "#212121" : "#EEE"};
-
-// }
+// export default connect(mapStateToProps)(withRouter(RightNav));
