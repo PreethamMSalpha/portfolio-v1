@@ -8,7 +8,8 @@ import Homepage from "./homepage.component";
 import Projects from "./components/projects/projects.component";
 import Knowledge from "./components/skills-knowledge/skills-knowledge.components";
 import Contact from "./components/contact/contact.component";
-import Navbar from "./components/nav-bar/navbar.component";
+// import Navbar from "./components/nav-bar/navbar.component";
+import Navbar from "./components/nav-bar/navbarCombined.component";
 import Footer from "./components/footer/footer.component";
 
 // import { setSidebar } from "./redux/theme/theme.actions";

@@ -34,9 +34,10 @@ const Ul = styled.ul`
     /* background-color: #0d2538; */
     /* background-image: linear-gradient(0deg, #4085d6 0%, #2bb2bb 100%); */
     background-color: ${(props) =>
-      props.theme.mode === "dark" ? "#2B2A2A" : "#F9F9F9"};
+      props.theme.mode === "dark" ? "#212121" : "#F9F9F9"};
     position: fixed;
     /* position: absolute; */
+    /* position: relative; */
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     top: 0;
     right: 0;
@@ -44,7 +45,7 @@ const Ul = styled.ul`
     height: auto;
     width: wrap-fit-content;
     margin: 0px;
-    padding: 40px 0px 0px 0px;
+    padding: 55px 0px 0px 0px;
     /* padding-top: 40px; */
     z-index: 1;
     /* padding-top: 3.5rem; */
@@ -71,7 +72,7 @@ const Ul = styled.ul`
 const GlobalStyle = createGlobalStyle`
   body{
      background-color: ${(props) =>
-       props.theme.mode === "dark" ? "#2B2A2A" : "#F9F9F9"};
+       props.theme.mode === "dark" ? "#212121" : "#F9F9F9"};
      color: ${(props) => (props.theme.mode === "dark" ? "#EEE" : "#111")};
       
   }
@@ -83,13 +84,23 @@ const GlobalStyle = createGlobalStyle`
  
 `;
 
+// export const themeStatus = ({ theme }) => {
+//   return theme;
+// };
+
 function RightNav({ open, history }) {
   // const { history } = history;
   // console.log(history);
   // console.log(open);
-  const sideBar = open;
-  const [burger, setBurger] = useState(sideBar);
+  // const sideBar = open;
+  // const [burger, setBurger] = useState(sideBar);
   const [theme, setTheme] = useState({ mode: "dark" });
+
+  useEffect(() => {
+    localStorage.setItem("theme", JSON.stringify(theme));
+  }, [theme]);
+
+  // themeStatus(theme);
 
   const [toggleIcon, setToggleIcon] = useState("sun");
 
@@ -97,14 +108,6 @@ function RightNav({ open, history }) {
     setToggleIcon(toggleIcon === "sun" ? "moon" : "sun");
   }
 
-  function handleClicks() {
-    setBurger(!burger);
-    console.log(burger);
-    // history.push(`/${route}`);
-    // open = false;
-  }
-  // <li onClick={() => history.push("/")}>Home</li>
-  // <Ul open={open}>
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />

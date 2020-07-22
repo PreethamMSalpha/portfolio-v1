@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 // import Burger from "./Burger";
 import Burger from "./burger.component";
@@ -8,13 +8,20 @@ import Burger from "./burger.component";
 // import alphavector from "../../assets/nav-bar/alpha_vector.svg";
 import alphacolor from "../../assets/nav-bar/alphacolor.svg";
 
+// import themeStatus from "./rightnav.component";
+
 const NavBase = styled.div`
   width: 100%;
   overflow: hidden;
   /* opacity: 1; */
   /* background: #212121; */
+  /* background: ${(props) => (props.mode === "dark" ? "#212121" : "#111")}; */
+
+  /* JSON.parse(localStorage.getItem("theme")).mode === 'dark' ? background: #212121 : background: #111 ; */
+
   height: 80px;
   /* background: white; */
+  /* background: #212121; */
   display: flex;
   z-index: 1;
   /* position: fixed; */
@@ -28,6 +35,10 @@ const NavBase = styled.div`
   margin-bottom: 500px; */
   /* position: fixed; */
   /* margin: 0 130px; */
+
+  @media (max-width: 768px) {
+    position: fixed;
+  }
 `;
 
 const Nav = styled.nav`
@@ -69,10 +80,10 @@ const LnN = styled.div`
       transition: 0.5s;
       transform: rotate(360deg);
     }
-    @media screen and (max-width: 500px) {
+    /* @media screen and (max-width: 500px) {
       height: 30px;
       width: 50px;
-    }
+    } */
   }
 `;
 
@@ -80,6 +91,23 @@ const Navbar = (props) => {
   // console.log(props);
   const { history, ...otherProps } = props;
   // console.log(history);
+  // console.log(themeStatus);
+  useEffect(() => {
+    var themeStatus = localStorage.getItem("theme");
+    console.log(JSON.parse(themeStatus).mode);
+  });
+
+  useEffect(() => {
+    console.log(document.body.get);
+  });
+
+  // console.log(JSON.parse(localStorage.getItem("theme")).mode);
+
+  // var themeData = localStorage.getItem("theme");
+  // var themeStatus = JSON.parse(themeData);
+
+  const ThemeContext = React.createContext(themes.light);
+
   return (
     <NavBase>
       <Nav>

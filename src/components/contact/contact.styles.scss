@@ -1,6 +1,10 @@
 .contact-form {
     padding: 50px 20px 50px;
 
+    @media screen and (max-width: 768px) {
+        padding-top: 100px;
+    }
+
     h1 {
         text-align: center;
     }
@@ -53,6 +57,7 @@
             border-color: initial;
             border-image: initial;
             margin-bottom: 3rem;
+            margin-top: 1.3rem;
 
             display: flex;
             justify-content: center;

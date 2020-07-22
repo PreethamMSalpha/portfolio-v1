@@ -16,6 +16,7 @@ const StyledBurger = styled.div`
     justify-content: space-around;
     flex-flow: column nowrap;
     position: absolute;
+    /* position: fixed; */
   }
 
   div {

@@ -3,6 +3,10 @@
     margin: auto;
     height: auto;
 
+    @media screen and (max-width: 768px) {
+        padding-top: 50px;
+    }
+
 
     .col-sections {
 
@@ -79,7 +83,7 @@
         justify-items: start;
     }
 
-    a{
+    a {
         margin: 0 10px;
     }
 }
