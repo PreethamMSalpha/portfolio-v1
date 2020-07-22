@@ -95,7 +95,7 @@ export const DATABASE = {
     {
       id: 1,
       name: "MongoDB",
-      imageUrl: "https://i.ibb.co/qN4z4KR/mongoDB.png",
+      imageUrl: "https://i.ibb.co/1T8rzHH/mongo.png",
     },
     {
       id: 2,
@@ -104,8 +104,8 @@ export const DATABASE = {
     },
     {
       id: 3,
-      name: "Oracle",
-      imageUrl: "https://i.ibb.co/vH36mkb/oracle.png",
+      name: "Firebase",
+      imageUrl: "https://i.ibb.co/MhYz52B/firebase.png",
     },
   ],
 };

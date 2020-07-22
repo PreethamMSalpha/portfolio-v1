@@ -57,7 +57,7 @@ function Knowledge() {
             <ImgTitle key={id} name={name} imageUrl={imageUrl} />
           ))}
         </div>
-        <h3>Databases</h3>
+        <h3>Database</h3>
         <div className="img-title-com">
           {databaseItems.map(({ id, name, imageUrl }) => (
             <ImgTitle key={id} name={name} imageUrl={imageUrl} />
