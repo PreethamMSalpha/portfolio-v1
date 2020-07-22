@@ -21,7 +21,7 @@ const SkillsHomepage = () => (
 
     <div className="skill-content">
       <SkillContainer image={web} title="Full Stack Development" />
-      <SkillContainer image={ui} title="UI/UX design" />
+      <SkillContainer image={ui} title="UI/UX Design" />
       <SkillContainer image={app} title="Mobile App Development" />
     </div>
   </div>

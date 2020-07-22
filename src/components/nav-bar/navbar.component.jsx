@@ -51,6 +51,11 @@ const LnN = styled.div`
     /* padding: 15px 0px; */
     justify-content: start;
     margin-left: 15px;
+
+    @media screen and (max-width: 500px) {
+      font-size: 1rem;
+      margin-left: 5px;
+    }
   }
 
   .icon {
@@ -63,6 +68,10 @@ const LnN = styled.div`
     &:hover {
       transition: 0.5s;
       transform: rotate(360deg);
+    }
+    @media screen and (max-width: 500px) {
+      height: 30px;
+      width: 50px;
     }
   }
 `;

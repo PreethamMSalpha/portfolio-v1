@@ -1,6 +1,8 @@
 .container {
     margin: auto;
-    height: 300px;
+    // height: 300px;
+    // height: 380px;
+    height: auto;
     width: 60%;
     // padding: 180px 20px 50px;
     padding: 100px 20px 50px;
@@ -17,6 +19,7 @@
     .button {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         color: white;
+        padding: 10px;
         text-transform: uppercase;
         margin-top: 20px;
         width: fit-content;

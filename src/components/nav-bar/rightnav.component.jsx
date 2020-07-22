@@ -15,6 +15,7 @@ import moon from "../../assets/nav-bar/moon.svg";
 const Ul = styled.ul`
   list-style: none;
   display: flex;
+  /* display: block; */
   flex-flow: row nowrap;
   flex-direction: row;
   justify-content: end;
@@ -34,8 +35,8 @@ const Ul = styled.ul`
     /* background-image: linear-gradient(0deg, #4085d6 0%, #2bb2bb 100%); */
     background-color: ${(props) =>
       props.theme.mode === "dark" ? "#2B2A2A" : "#F9F9F9"};
-    /* position: fixed; */
-    position: absolute;
+    position: fixed;
+    /* position: absolute; */
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     top: 0;
     right: 0;
