@@ -84,7 +84,12 @@ const Navbar = (props) => {
     <NavBase>
       <Nav>
         <LnN>
-          <img className="icon" src={alphacolor} alt="logo" />
+          <img
+            className="icon"
+            src={alphacolor}
+            alt="logo"
+            onClick={() => history.push("/")}
+          />
           <h3 className="logo">PREETHAM.M.S</h3>
         </LnN>
         <Burger history={history} />

@@ -16,8 +16,25 @@ const logoSize = {
 };
 
 function Logo(props) {
-  return <img className="logos" src={props.name} alt="logo" style={logoSize} />;
+  return (
+    <a href={props.link}>
+      <img className="logos" src={props.name} alt="logo" style={logoSize} />
+    </a>
+  );
 }
+
+// function Logo(props) {
+//   console.log(props);
+//   return (
+//     <img
+//       className="logos"
+//       src={props.name}
+//       alt="logo"
+//       style={logoSize}
+//       href={props.link}
+//     />
+//   );
+// }
 
 // const Footer = (props) => (
 //   <div className="footer">
@@ -58,7 +75,11 @@ const Footer = (props) => (
     <div className="center-div">
       <div className="contents">
         <div className="logo">
-          <img src={alphaVector} alt="logo" />
+          <img
+            src={alphaVector}
+            alt="logo"
+            onClick={() => props.history.push("/")}
+          />
           <p>PREETHAM.M.S</p>
         </div>
         <div className="routes">
@@ -69,10 +90,16 @@ const Footer = (props) => (
         <div className="follow-up">
           <p>Follow me on</p>
           <div className="logos">
-            <Logo name={insta} />
-            <Logo name={fb} />
-            <Logo name={git} />
-            <Logo name={linkedIn} />
+            <Logo
+              name={insta}
+              link={"https://www.instagram.com/always__the__alpha/"}
+            />
+            <Logo name={fb} link={"https://www.facebook.com/preethamalphams"} />
+            <Logo name={git} link={"https://github.com/PreethamMSalpha"} />
+            <Logo
+              name={linkedIn}
+              link={"https://www.linkedin.com/in/preethamms/"}
+            />
           </div>
         </div>
       </div>
