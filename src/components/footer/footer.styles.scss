@@ -32,11 +32,11 @@
     // position: relative;
 
     @media screen and (max-width:750px) {
-        flex-direction: column;
-        height: auto;
-        align-items: center;
-        margin-top: unset;
-        padding: 20px;
+      flex-direction: column;
+      height: auto;
+      align-items: center;
+      margin-top: unset;
+      padding: 20px;
     }
 
 
@@ -45,12 +45,13 @@
       justify-content: start;
       position: relative;
       margin-left: 50px;
+
       // padding-right: 500px;
       // justify-content: start;
       @media screen and (max-width:750px) {
         margin-left: unset;
         margin: 0 auto;
-    }
+      }
 
 
       img {
@@ -71,7 +72,11 @@
       // padding: 0px 150px;
       margin: 0 auto;
       width: fit-content;
-      cursor: pointer;
+
+
+      p {
+        cursor: pointer;
+      }
     }
 
     .follow-up {
@@ -84,12 +89,13 @@
       @media screen and (max-width:750px) {
         margin-right: unset;
         margin: 0 auto;
-    }
+      }
 
       .logos {
         display: flex;
         flex-direction: row;
         margin: 0px 5px;
+        transition: transform 0.2s ease;
 
         &:hover {
           transform: scale(1.2);
@@ -98,7 +104,7 @@
 
         @media screen and (max-width:800px) {
           margin: 0px 10px;
-      }
+        }
       }
     }
   }
