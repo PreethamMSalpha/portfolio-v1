@@ -10,7 +10,7 @@ const Intro = (props) => {
 
   return (
     <div className="container">
-      <h1>Hi!!!, I'm Preetham</h1>
+      <h1>Hi! I'm Preetham</h1>
       <p>
         I'm a self-taught Full Stack JavaScript, Mobile App Developer and UI/UX
         Designer. Currently working as Freelancer. I'm studying Computer Science
