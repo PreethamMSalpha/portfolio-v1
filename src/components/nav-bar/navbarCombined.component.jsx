@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import alphacolor from "../../assets/nav-bar/alphacolor.svg";
@@ -162,10 +162,6 @@ const GlobalStyle = createGlobalStyle`
 function RightNav({ open, history }) {
   const [theme, setTheme] = useState({ mode: "dark" });
 
-  useEffect(() => {
-    localStorage.setItem("theme", JSON.stringify(theme));
-  }, [theme]);
-
   const [toggleIcon, setToggleIcon] = useState("sun");
 
   function toggle() {
@@ -218,14 +214,6 @@ const Burger = (props) => {
  */
 const Navbar = (props) => {
   const { history, ...otherProps } = props;
-  useEffect(() => {
-    var themeStatus = localStorage.getItem("theme");
-    console.log(JSON.parse(themeStatus).mode);
-  });
-
-  useEffect(() => {
-    console.log(document.body.get);
-  });
 
   return (
     <NavBase>

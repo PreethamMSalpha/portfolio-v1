@@ -8,32 +8,11 @@ function ProjectTile({ id, title, description, git, deploy }) {
     <div className="border">
       <h3>{title}</h3>
       <p>{description}</p>
-      {
-        git ? (
-        
-            <a href={git}>source code</a>
-          
-        ) : ""
-      }
-      {deploy ? (
-      
-          <a href={deploy}>deployed link</a>
-        
-      ) : " "}
+      {git ? <a href={git}>source code</a> : ""}
+      {deploy ? <a href={deploy}>deployed link</a> : " "}
     </div>
   );
 }
-
-// function ProjectTile() {
-//   return (
-//     <div className="border">
-//       <h3>Project Title</h3>
-//       <p>Project desc</p>
-//       <button>Link</button>
-//       <button>Link</button>
-//     </div>
-//   );
-// }
 
 function Projects() {
   const [projects, setProjects] = useState(Data);

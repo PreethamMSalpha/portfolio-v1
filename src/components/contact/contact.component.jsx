@@ -48,7 +48,7 @@ function Contact(props) {
       setName("");
       setEmail("");
       setMessage("");
-      alert("Your response is sent");
+      alert("Your response has sent");
       props.history.push("/");
     }
   }

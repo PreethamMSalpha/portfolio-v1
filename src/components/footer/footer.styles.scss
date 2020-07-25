@@ -4,10 +4,8 @@
   margin: unset;
   background-color: #4085d6;
   background-image: linear-gradient(0deg, #4085d6 0%, #2bb2bb 100%);
-  // margin: 40px auto;
   display: flex;
   justify-content: center;
-  // align-items: center;
 
   p {
     font-size: 1.2rem;
@@ -21,15 +19,12 @@
     color: white;
     height: 150px;
     width: 70%;
-    // margin: 40px 0;
-    // padding: 35px 0px;
     margin-top: 60px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     background: unset;
-    // position: relative;
 
     @media screen and (max-width:750px) {
       flex-direction: column;
@@ -46,8 +41,6 @@
       position: relative;
       margin-left: 50px;
 
-      // padding-right: 500px;
-      // justify-content: start;
       @media screen and (max-width:750px) {
         margin-left: unset;
         margin: 0 auto;
@@ -67,9 +60,6 @@
     }
 
     .routes {
-      // justify-content: center;
-      // position: absolute;
-      // padding: 0px 150px;
       margin: 0 auto;
       width: fit-content;
 
@@ -116,46 +106,3 @@
     color: "black"
   }
 }
-
-
-// .contents {
-//     color: white;
-//     height: 200px;
-//     width: 60%;
-//     // margin: 40px 0;
-//     padding: 35px 0px;
-//     margin-top: 60px;
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-evenly;
-//     align-items: center;
-//     background-color: #4085d6;
-//     background-image: linear-gradient(0deg, #4085d6 0%, #2bb2bb 100%);
-
-//     .logo {
-//         justify-content: start;
-//     }
-
-//     .routes {
-//         justify-content: center;
-//         position: absolute;
-//         // padding: 0px 150px;
-//     }
-
-//     .follow-up {
-//         justify-content: end;
-//         display: flex;
-//         flex-direction: column;
-
-//         .logos {
-//             display: flex;
-//             flex-direction: row;
-//             margin: 0px 5px;
-
-//             &:hover {
-//                 transform: scale(1.2);
-//                 transition: transform 0.2s ease;
-//             }
-//         }
-//     }
-// }

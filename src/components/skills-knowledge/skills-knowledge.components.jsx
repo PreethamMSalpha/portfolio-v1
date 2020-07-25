@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 import "./skills-knowledge.styles.scss";
-// import moon from "../../assets/nav-bar/moon.svg";
 
 import { APP, UI, STATE, DATABASE, FRONTEND, BACKEND } from "../../skills.data";
 

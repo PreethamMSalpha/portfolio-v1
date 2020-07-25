@@ -16,7 +16,6 @@ const StyledBurger = styled.div`
     justify-content: space-around;
     flex-flow: column nowrap;
     position: absolute;
-    /* position: fixed; */
   }
 
   div {
@@ -42,29 +41,7 @@ const StyledBurger = styled.div`
   }
 `;
 
-// const Burger = (props) => {
-//   // console.log(props);
-//   const { history } = props;
-//   const [open, setOpen] = useState(false);
-
-//   return (
-//     <>
-//       <StyledBurger open={open} onClick={() => setOpen(!open)}>
-//         <div />
-//         <div />
-//         <div />
-//       </StyledBurger>
-//       <RightNav history={history} />
-//     </>
-//   );
-// };
-
-// function handleSideBar(open) {
-//   return open === true ? false : true;
-// }
-
 const Burger = (props) => {
-  // console.log(props);
   const { history } = props;
   const [open, setOpen] = useState(false);
 
